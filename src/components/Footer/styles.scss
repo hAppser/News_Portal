@@ -1,0 +1,17 @@
+.mainFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 45px;
+    div {
+        font-size: 25px;
+        font-weight: 700;
+        &.small-text {
+            font-size: 12px;
+            font-weight: 400;
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+}
