@@ -2,9 +2,13 @@ import './styles.scss'
 import routeMain from './routes'
 import PageTitle from 'components/PageTitle'
 
-const NewsList = () => {
+import NewsList from 'components/NewsList'
+import newsListMocks from 'fixtures/newsListMocks'
+
+
+const NewsListPage = () => {
     return(
-        <section className='NewsList'>
+        <section className='newsListPage'>
             <PageTitle 
                 title={
                     <h2>
@@ -12,9 +16,11 @@ const NewsList = () => {
                     </h2>
                 }
             />
+            {newsListMocks.length > 0 && <NewsList list={newsListMocks.slice(0,9)}/>}
+  
         </section>    
     )
 }
 
 export {routeMain}
-export default NewsList
+export default NewsListPage
