@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const getNews = () => {
-    return axios
-        .get("https://inshorts.deta.dev/news?category=all")
+    return axios.get("https://inshorts.deta.dev/news?category=all")
 
 }
 

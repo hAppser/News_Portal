@@ -1,12 +1,22 @@
+import { useState, useEffect } from 'react'
+
 import './styles.scss'
 import routeMain from './routes'
 import PageTitle from 'components/PageTitle'
 
 import NewsList from 'components/NewsList'
-import newsListMocks from 'fixtures/newsListMocks'
+import getNews from 'services/getNews'
 
 
 const NewsListPage = () => {
+    const [newsList, setNewsList] = useState([]);
+    
+    useEffect(() => {
+        getNews().then(response => {
+            setNewsList(response.data.data)
+        })
+    }, [])
+
     return(
         <section className='newsListPage'>
             <PageTitle 
@@ -16,7 +26,7 @@ const NewsListPage = () => {
                     </h2>
                 }
             />
-            {newsListMocks.length > 0 && <NewsList list={newsListMocks.slice(0,9)}/>}
+            {newsList.length > 0 && <NewsList list={newsList.slice(0,18)}/>}
   
         </section>    
     )
