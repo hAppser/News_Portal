@@ -5,7 +5,7 @@ import DataView from 'components/DateView';
 
 const NewsItem = (props) => {
     return (
-        <Link className='newsItem' to={`/newsDetail/${props.item.id}`}>
+        <Link className='newsItem' to={`/newsDetail/${props.item.title}`}>
             <div className='title'>
                 {props.item.title}
             </div>

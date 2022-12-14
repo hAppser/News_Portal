@@ -8,18 +8,14 @@ import getNews from 'services/getNews'
 import DataView from 'components/DateView'
 
 const NewsDetail = () => {
-    const {id} = useParams()
+    const {title} = useParams()
     const [news, setNews] = useState(null)
 
     useEffect(()=> {
         getNews().then(response => {
-            setNews(response.data.data.find(item => {
-                console.log(item.id, id)
-                return item.id == id
-            }))
+            setNews(response.data.data.find(item => item.title === title))
         })
-    }, [id])
-    // console.log(news);
+    }, [title])
     return(
         <section className='newsDetail'>
             {news ? (
