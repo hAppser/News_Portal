@@ -3,7 +3,7 @@ import './styles.scss';
 import { NavLink } from 'react-router-dom';
 
 import {routeMain as routeMainPage} from 'pages/MainPage';
-import {routeMain as routeNewsList} from 'pages/NewsList';
+import {routeMain as routeNewsList} from 'pages/NewsListPage';
 import {routeMain as routeContacts} from 'pages/Contacts';
 
 

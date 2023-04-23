@@ -1,4 +1,4 @@
-const newsList = [
+const newsListMocks = [
     {
         id: 1,
         title: 'Тайтл для 1-й новости',
@@ -60,3 +60,5 @@ const newsList = [
         date: '09/03'
     },
 ]
+
+export default newsListMocks

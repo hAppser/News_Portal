@@ -1,3 +1,3 @@
-const routeMain = (id = ":id") => `/newsDetail/${id}`;
+const routeMain = (title = ":title") => `/newsDetail/${title}`;
 
 export default routeMain

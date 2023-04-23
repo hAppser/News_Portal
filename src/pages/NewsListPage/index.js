@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react'
 
 import './styles.scss'
 import routeMain from './routes'
-
 import PageTitle from 'components/PageTitle'
-import NewsList from 'components/NewsList'
 
+import NewsList from 'components/NewsList'
 import getNews from 'services/getNews'
 
-const MainPage = () => {
+
+const NewsListPage = () => {
     const [newsList, setNewsList] = useState([]);
     
     useEffect(() => {
@@ -18,18 +18,19 @@ const MainPage = () => {
     }, [])
 
     return(
-        <section className='MainPage'>
+        <section className='newsListPage'>
             <PageTitle 
                 title={
                     <h2>
-                        Всегда <br/> свежие <span>новости</span>
+                       Быть <br/> в курсе <span>событий</span>
                     </h2>
                 }
             />
-            {newsList.length > 0 && <NewsList list={newsList.slice(0,6)}/>}
-        </section>
+            {newsList.length > 0 && <NewsList list={newsList.slice(0,18)}/>}
+  
+        </section>    
     )
 }
 
 export {routeMain}
-export default MainPage
+export default NewsListPage
