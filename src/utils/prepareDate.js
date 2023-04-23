@@ -13,7 +13,6 @@ const prepareDate = value =>{
         'Nov':11,
         'Dec':12
     }
-
     return {
         day: parseInt(value),
         month: months[value.split(' ').splice(1,1)]

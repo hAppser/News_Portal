@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import './styles.scss';
-
 import DataView from 'components/DateView';
+
+import './styles.scss';
 
 const NewsItem = (props) => {
     return (

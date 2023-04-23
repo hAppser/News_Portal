@@ -1,7 +1,7 @@
 import './styles.scss'
 import routeMain from './routes'
 
-import DanilImg from 'assets/img/images2.jpg'
+import myImg from 'assets/img/img.jpg'
 
 const Contacts = () => {
     return(
@@ -24,7 +24,7 @@ const Contacts = () => {
                 </div>
             </div>
             <div className='contacts-image'>
-                <img src={DanilImg} alt={DanilImg}/>
+                <img src={myImg} alt="Danil's image"/>
             </div>
         </section>
     )
